@@ -18,6 +18,8 @@ describe('scanDir', function() {
       'assets/css/test.less',
       'assets/js/view.js',
       'b.txt',
+      'dist/a.txt',
+      'dist/b.txt',
       'package.json'
     ]);
   });
@@ -25,7 +27,7 @@ describe('scanDir', function() {
 
   it('scan dir with ignore rules', function() {
     const options = {
-      ignore: ['package.json', 'README.md', 'README']
+      ignore: ['package.json', 'README.md', 'README', 'dist/']
     };
     const list = scanDir(dir, options).map(toRelative);
     list.should.eql([
@@ -40,7 +42,7 @@ describe('scanDir', function() {
   it('scan dir with match rules', function() {
     const options = {
       match: ['a.txt'],
-      ignore: ['*.txt', 'README.md', 'package.json']
+      ignore: ['*.txt', 'README.md', 'package.json', 'dist/']
     };
 
     const list = scanDir(dir, options).map(toRelative);
@@ -54,7 +56,7 @@ describe('scanDir', function() {
 
   it('options.relative', function() {
     const options = {
-      ignore: ['app/package.json'],
+      ignore: ['app/package.json', 'app/dist/'],
       relative: pathUtil.dirname(dir)
     };
 

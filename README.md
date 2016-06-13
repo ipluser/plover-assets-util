@@ -9,9 +9,9 @@
 资源编译相关工具类
 
 
-## scanDir
+## - scanDir(dir)
 
-## hashDir
+## - hashDir(dir)
 
 
 [npm-image]: https://img.shields.io/npm/v/plover-assets-util.svg?style=flat-square

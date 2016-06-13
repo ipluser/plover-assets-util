@@ -50,4 +50,21 @@ describe('scanDir', function() {
       'assets/js/view.js'
     ]);
   });
+
+
+  it('options.relative', function() {
+    const options = {
+      ignore: ['app/package.json'],
+      relative: pathUtil.dirname(dir)
+    };
+
+    const list = scanDir(dir, options).map(toRelative);
+    list.should.eql([
+      'README.md',
+      'a.txt',
+      'assets/css/test.less',
+      'assets/js/view.js',
+      'b.txt'
+    ]);
+  });
 });

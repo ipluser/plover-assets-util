@@ -6,7 +6,7 @@ const scanDir = require('..').scanDir;
 
 
 describe('scanDir', function() {
-  const dir = pathUtil.join(__dirname, 'fixtures/scan-dir');
+  const dir = pathUtil.join(__dirname, 'fixtures/app');
 
   const toRelative = path => pathUtil.relative(dir, path);
 

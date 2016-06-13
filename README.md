@@ -9,6 +9,11 @@
 资源编译相关工具类
 
 
+## scanDir
+
+## hashDir
+
+
 [npm-image]: https://img.shields.io/npm/v/plover-assets-util.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/plover-assets-util
 [travis-image]: https://img.shields.io/travis/plover-modules/plover-assets-util/master.svg?style=flat-square

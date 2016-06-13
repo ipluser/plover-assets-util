@@ -6,14 +6,48 @@ const scanDir = require('..').scanDir;
 
 
 describe('scanDir', function() {
-  it('test', function() {
-    const dir = pathUtil.join(__dirname, 'fixtures/scan-dir');
-    const list = scanDir(dir).map(path => pathUtil.relative(dir, path));
+  const dir = pathUtil.join(__dirname, 'fixtures/scan-dir');
+
+  const toRelative = path => pathUtil.relative(dir, path);
+
+  it('scan dir files', function() {
+    const list = scanDir(dir).map(toRelative);
+    list.should.eql([
+      'README.md',
+      'a.txt',
+      'assets/css/test.less',
+      'assets/js/view.js',
+      'b.txt',
+      'package.json'
+    ]);
+  });
+
+
+  it('scan dir with ignore rules', function() {
+    const options = {
+      ignore: ['package.json', 'README.md', 'README']
+    };
+    const list = scanDir(dir, options).map(toRelative);
     list.should.eql([
       'a.txt',
       'assets/css/test.less',
       'assets/js/view.js',
       'b.txt'
+    ]);
+  });
+
+
+  it('scan dir with match rules', function() {
+    const options = {
+      match: ['a.txt'],
+      ignore: ['*.txt', 'README.md', 'package.json']
+    };
+
+    const list = scanDir(dir, options).map(toRelative);
+    list.should.eql([
+      'a.txt',
+      'assets/css/test.less',
+      'assets/js/view.js'
     ]);
   });
 });

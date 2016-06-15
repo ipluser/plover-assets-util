@@ -23,4 +23,16 @@ describe('hashDir', function() {
     const hashD = hashDir(dir);
     hashA.should.equal(hashD);
   });
+
+
+  it('with salt', function() {
+    const hashA = hashDir(dir);
+    const hashB = hashDir(dir, { salt: 'abc' });
+    const hashC = hashDir(dir, { salt: 'def' });
+    const hashD = hashDir(dir, { salt: 'abc' });
+
+    hashA.should.not.equal(hashB);
+    hashB.should.not.equal(hashC);
+    hashB.should.equal(hashD);
+  });
 });

@@ -1,3 +1,13 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/plover-modules/plover-assets-util/compare/v1.2.0...v1.2.1) (2016-06-15)
+
+
+### Bug Fixes
+
+* fix match rule only ([1aea337](https://github.com/plover-modules/plover-assets-util/commit/1aea337))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/plover-modules/plover-assets-util/compare/v1.1.0...v1.2.0) (2016-06-13)
 

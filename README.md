@@ -9,9 +9,15 @@
 资源编译相关工具类
 
 
-## - scanDir(dir)
+```js
+const util = require('plover-assets-util');
 
-## - hashDir(dir)
+const paths = util.scanDir(dir, options);
+
+const hash = util.hashDir(dir, options);
+
+const str = util.template(pattern, data);
+```
 
 
 [npm-image]: https://img.shields.io/npm/v/plover-assets-util.svg?style=flat-square

@@ -1,3 +1,13 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/plover-modules/plover-assets-util/compare/v1.2.1...v1.3.0) (2016-06-15)
+
+
+### Features
+
+* add salt options for hashDir ([9a6414a](https://github.com/plover-modules/plover-assets-util/commit/9a6414a))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/plover-modules/plover-assets-util/compare/v1.2.0...v1.2.1) (2016-06-15)
 

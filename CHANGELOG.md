@@ -1,3 +1,13 @@
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/plover-modules/plover-assets-util/compare/v1.3.0...v1.4.0) (2016-06-15)
+
+
+### Features
+
+* add `util.template(pattern, data)` ([1f23450](https://github.com/plover-modules/plover-assets-util/commit/1f23450))
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/plover-modules/plover-assets-util/compare/v1.2.1...v1.3.0) (2016-06-15)
 

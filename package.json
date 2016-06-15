@@ -1,6 +1,6 @@
 {
   "name": "plover-assets-util",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "资源编译相关工具类",
   "main": "lib/index",
   "scripts": {

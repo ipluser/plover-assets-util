@@ -69,4 +69,17 @@ describe('scanDir', function() {
       'b.txt'
     ]);
   });
+
+
+  it('match only', function() {
+    const options = {
+      match: ['**/*.js', '*.json']
+    };
+
+    const list = scanDir(dir, options).map(toRelative);
+    list.should.eql([
+      'assets/js/view.js',
+      'package.json'
+    ]);
+  });
 });
